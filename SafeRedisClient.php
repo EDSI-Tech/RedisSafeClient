@@ -10,7 +10,7 @@ namespace EdsiTech\RedisSafeClientBundle;
 
 use Predis\Client;
 
-class SafeClient
+class SafeRedisClient
 {
 
     /**
