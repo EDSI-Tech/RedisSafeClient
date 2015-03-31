@@ -1,5 +1,5 @@
 {
-  "name": "edsi-tech/RedisSafeClient",
+  "name": "edsi-tech/redis-safe-client",
   "type": "symfony-bundle",
   "homepage": "https://github.com/EDSI-Tech/RedisSafeClient",
   "authors": [
