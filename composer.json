@@ -16,5 +16,6 @@
   },
   "autoload": {
     "psr-0": { "EdsiTech\\RedisSafeClientBundle\\": "" }
-  }
+  },
+  "target-dir": "EdsiTech/RedisSafeClientBundle"
 }
