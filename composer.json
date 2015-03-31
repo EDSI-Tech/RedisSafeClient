@@ -1,0 +1,20 @@
+{
+  "name": "edsi-tech/RedisSafeClient",
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/EDSI-Tech/RedisSafeClient",
+  "authors": [
+    {
+      "name": "Kevin Robatel",
+      "email": "k.robatel@edsi-tech.com",
+      "homepage": "https://www.edsi-tech.com/"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "symfony/symfony": "2.*",
+    "snc/redis-bundle": "1.1.*"
+  },
+  "autoload": {
+    "psr-0": { "EdsiTech\\RedisSafeClientBundle\\": "" }
+  }
+}
