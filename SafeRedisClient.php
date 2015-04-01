@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
+ * EDSI-Tech Sàrl
  * User: Kevin
  * Date: 3/31/2015
  * Time: 8:25 PM
@@ -23,6 +23,7 @@ class SafeRedisClient
      * @var array
      */
     static protected $localCache = [];
+
 
     public function __construct(Client $redisClient)
     {
