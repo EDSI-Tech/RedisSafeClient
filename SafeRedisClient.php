@@ -1,20 +1,24 @@
 <?php
 /**
- * EDSI-Tech Sàrl
- * User: Kevin
- * Date: 3/31/2015
- * Time: 8:25 PM
+ * (c) EDSI-Tech Sarl - All rights reserved.
+ * This file cannot be copied and/or distributed without express permission of EDSI-Tech Sarl and all its content remains the property of EDSI-Tech Sarl.
+ *
+ * @author      Kevin ROBATEL <k.robatel@edsi-tech.com>
+ * @author      Philippe BONVIN <p.bonvin@edsi-tech.com>
+ * @version     1.2
+ * @since       2015-03-31
  */
 
 namespace EdsiTech\RedisSafeClientBundle;
 
-use Predis\Client;
+use Predis\Client as PredisClient;
+use Snc\RedisBundle\Client\Phpredis\Client as PhpRedisClient;
 
 class SafeRedisClient
 {
 
     /**
-     * @var Client
+     * @var mixed
      */
     protected $redis;
 
@@ -25,8 +29,13 @@ class SafeRedisClient
     static protected $localCache = [];
 
 
-    public function __construct(Client $redisClient)
+    public function __construct($redisClient)
     {
+        
+        if((!$redisClient instanceof PredisClient) && (!$redisClient instanceof PhpRedisClient)) {
+            throw new \Exception("Invalid client type provided.");
+        }
+        
         $this->redis = $redisClient;
     }
 
